@@ -29,7 +29,7 @@ An **`F_p`-arithmetic circuit** is a circuit consisting of set of wires that car
 
 👉 Remember that given a prime number `p`, the **finite field** **`F_p`** consists of the set of numbers `{0,...,p-1}`on which we can add and multiply these numbers modulo `p`.
 
-For example, the finite field `F_7` consists of the set of numbers `{0,...,6}`on which we can add and multiply numbers modulo `7`. An easy way to understand how operating modulo `7` works, is to **think of a clock of 7 hours** in which we do not care about how many times the hands have turned the clock, only what time they mark. In other words, we only care about the remainder of dividing by 7. For instance:
+For example, the finite field `F_7` consists of the set of numbers `{0,...,6}`on which we can add and multiply numbers modulo `7`. An easy way to understand how operating modulo `7` works, is to **think of a clock of 7 hours** in which we do not care about how many times the hands have turned on the clock, only what time they mark. In other words, we only care about the remainder of dividing by 7. For instance:
 
 * `15 modulo 7 = 1`, since `15 = 7 + 7 + 1`
 * `7 modulo 7 = 0`
@@ -91,11 +91,11 @@ In this case, by replacing directly the variable `d`, we can gather the two equa
 
 * `out = a*b + c modulo 7`
 
-The nice thing about circuits, is that although most **zero-knowledge protocols have an inherent complexity** that can be overwhelming for many developers, the **design of arithmetic circuits is clear and neat**.
+The nice thing about circuits is that although most **zero-knowledge protocols have an inherent complexity** that can be overwhelming for many developers, the **design of arithmetic circuits is clear and neat**.
 
 👉 With `circom`, you design your own circuits with your own constraints, and the compiler outputs the R1CS representation that you will need for your zero-knowledge proof.
 
-Zero-knowledge permits proving **circuit satisfiability**. What this means is, that you can prove that you know a set of signals that satisfy the circuit, or in other words, that you know a solution to the R1CS. This set of signals is called the **witness**.
+Zero-knowledge permits proving **circuit satisfiability**. What this means is that you can prove that you know a set of signals that satisfy the circuit, or in other words, that you know a solution to the R1CS. This set of signals is called the **witness**.
 
 ## Witness <a id="witness"></a>
 
@@ -109,5 +109,5 @@ An assignment of the signals is called a **witness**. For example, `{a = 2, b = 
 
 ## Summary <a id="summary"></a>
 
-​**In summary, zk-SNARK proofs are an specific type of zero-knowledge proofs that allow you to prove that you know a set of signals (witness) that match all the constraints of a circuit without revealing any of the signals except the public inputs and the outputs.**
+​**In summary, zk-SNARK proofs are a specific type of zero-knowledge proofs that allow you to prove that you know a set of signals (witness) that match all the constraints of a circuit without revealing any of the signals except the public inputs and the outputs.**
 
